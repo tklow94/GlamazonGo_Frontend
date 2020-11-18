@@ -1,4 +1,3 @@
-[Link To Frontend](https://github.com/tklow94)
 
 # Getting Started with Create React App
 
