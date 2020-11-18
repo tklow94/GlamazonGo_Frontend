@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux'
-import userReducer from './Users/userReducer'
+import authReducer from "./Users/authReducer";
+import messageReducer from "./Users/messageReducer";
 
 const rootReducer = combineReducers({
-    user: userReducer
+    auth: authReducer,
+    message: messageReducer,
 })
 
 export default rootReducer
