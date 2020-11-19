@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from 'react-router-dom';
 
 //from react-validation library
-import Form from "react-validation/build/form";
+import Form from "react-validation/build/form"; //so don't have to rerender entire form on input
 import Input from "react-validation/build/input";//accepts validations
 import CheckButton from "react-validation/build/button";//helps us verify if the form validation is successful or not.
 
@@ -22,6 +22,7 @@ const required = (value) => { //takes in the value of the input
 const Login = (props) => {
   const form = useRef();
   const checkBtn = useRef();
+  console.log(form)
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
