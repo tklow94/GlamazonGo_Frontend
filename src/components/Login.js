@@ -2,13 +2,14 @@ import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from 'react-router-dom';
 
+//from react-validation library
 import Form from "react-validation/build/form";
-import Input from "react-validation/build/input";
-import CheckButton from "react-validation/build/button";
+import Input from "react-validation/build/input";//accepts validations
+import CheckButton from "react-validation/build/button";//helps us verify if the form validation is successful or not.
 
 import { login } from "../redux/Users/userActions";
 
-const required = (value) => {
+const required = (value) => { //takes in the value of the input
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -46,7 +47,7 @@ const Login = (props) => {
 
     setLoading(true);
 
-    form.current.validateAll();
+    form.current.validateAll();//performs all validations when login button is pressed and dispatches certain actions
 
     if (checkBtn.current.context._errors.length === 0) {
       dispatch(login(username, password))

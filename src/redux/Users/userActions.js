@@ -10,6 +10,8 @@ import {
   
   import AuthService from "../services/auth.service";
 
+  //action creators for API messages
+
 export const setMessage = (message) => ({
   type: SET_MESSAGE,
   payload: message,
@@ -18,6 +20,9 @@ export const setMessage = (message) => ({
 export const clearMessage = () => ({
   type: CLEAR_MESSAGE,
 });
+
+
+//Auth Action creators
 
 export const register = (first_name, last_name, username, email, password) => (dispatch) => {
     return AuthService.register(username, email, password).then(

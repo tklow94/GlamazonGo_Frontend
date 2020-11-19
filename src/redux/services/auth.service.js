@@ -2,6 +2,7 @@ import axios from "axios"
 
 const API_URL = "http://localhost:3000/users"
 
+//helper function to post registration data to backend
 const register = (first_name, last_name, username, email, password) => {
     return axios.post(API_URL + "signup", {
         first_name,
@@ -12,6 +13,8 @@ const register = (first_name, last_name, username, email, password) => {
     })
 }
 
+
+//helper to post user id to login and saves JWT to local storage.
 const login = (username, password) => {
     return axios
         .post(API_URL + "signin", {
@@ -26,6 +29,8 @@ const login = (username, password) => {
         })
 }
 
+
+//helper function to faciliate logout, removes JWT from local storage.
 const logout =() => {
     localStorage.removeItem("user")
 };
