@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const API_URL = "http://localhost:3000/users"
+const API_URL = "http://localhost:3000/users/"
 
 //helper function to post registration data to backend
 const register = (first_name, last_name, username, email, password) => {
@@ -14,10 +14,10 @@ const register = (first_name, last_name, username, email, password) => {
 }
 
 
-//helper to post user id to login and saves JWT to local storage.
+//helper to post username and password login and saves JWT to local storage.
 const login = (username, password) => {
     return axios
-        .post(API_URL + "signin", {
+        .post(API_URL + 8, {
             username,
             password,
         })

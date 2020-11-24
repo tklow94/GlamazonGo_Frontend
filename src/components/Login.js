@@ -22,7 +22,7 @@ const required = (value) => { //takes in the value of the input
 const Login = (props) => {
   const form = useRef();
   const checkBtn = useRef();
-  console.log(form)
+
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
